@@ -55,7 +55,7 @@ class Kohana_Field {
     }
     elseif(isset($this->config['type']) AND $this->config['type'] == 'fk')
     {
-      $conf = Namlouvani::objects($name);
+      $conf = Arnal::objects($name);
 
       $models = ORM::factory(ucfirst($name));
       list($rights, $models) = @Controller_Admin_Object::check_rights($conf, $models);
