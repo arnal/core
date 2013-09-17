@@ -11,7 +11,7 @@ class Kohana_Document {
     $this->_model_name = ucfirst($model_name);
 
     $type = strtolower($this->_model_name);
-    $this->_config = Kohana::$config->load('objects')->get($type);
+    $this->_config = Arnal::$schema->load($type);
     $this->_config['code'] = $type;
 
     if($data instanceOf Kohana_Model)

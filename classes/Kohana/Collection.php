@@ -18,7 +18,7 @@ class Kohana_Collection implements Iterator, Countable {
   public function __construct($model_name, $options=NULL)
   {
     $this->model_name = $model_name;
-    $this->config = Arnal::objects(strtolower($this->model_name));
+    $this->config = Arnal::$schema->load(strtolower($this->model_name));
 
     if($options !== NULL)
     {
