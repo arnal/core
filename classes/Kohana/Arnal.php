@@ -10,17 +10,17 @@ class Kohana_Arnal {
 
   public static function init(array $settings = NULL)
   {
-		if (Arnal::$_init)
-		{
-			return;
-		}
+    if (Arnal::$_init)
+    {
+      return;
+    }
 
     Arnal::$_init = TRUE;
 
-		if ( ! Arnal::$schema instanceof Schema)
-		{
-			Arnal::$schema = new Schema;
-		}
+    if ( ! Arnal::$schema instanceof Schema)
+    {
+      Arnal::$schema = new Schema;
+    }
   }
 
   public static function msg($msg, $type='success')
