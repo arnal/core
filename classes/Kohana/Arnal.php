@@ -2,8 +2,8 @@
 
 class Kohana_Arnal {
     
-  const VERSION = '1.0.0';
-  const CODENAME = 'kaja';
+  const VERSION = '1.0.0-dev';
+  const CODENAME = 'kája';
 
   protected static $_init = FALSE;
   public static $schema = FALSE;
