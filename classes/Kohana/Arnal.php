@@ -119,4 +119,9 @@ class Kohana_Arnal {
     }
     return FALSE;
   }
+
+  public static function format_coolurl($string)
+  {
+    return str_replace(array(' ',',','.','/'), array('-','','-','-'), strtolower(UTF8::transliterate_to_ascii($string)));
+  }
 }

@@ -85,7 +85,7 @@ class Kohana_Document {
           break;
 
         default:
-          $col['rendered'] = $col['force_html'] ? $field->render() : ($type == 'export' ? strip_tags($field->render()) : $field->render());
+          $col['rendered'] = isset($col['force_html']) && $col['force_html'] ? $field->render() : ($type == 'export' ? strip_tags($field->render()) : $field->render());
           $col['url'] = $this->url();
           $col['type'] = $conf['code'];
           break;

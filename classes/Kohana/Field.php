@@ -118,7 +118,7 @@ class Kohana_Field {
     }
     elseif(isset($this->config['primary']) AND $this->config['primary'] == TRUE)
     {
-      $output = '<strong>'.HTML::anchor($this->document->url(), $output).'</strong>';
+      $output = '<strong>'.HTML::anchor($this->document->admin_url(), $output).'</strong>';
     }
     return $output;
   }

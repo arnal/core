@@ -97,7 +97,7 @@ class Kohana_Collection implements Iterator, Countable {
       }
     }
 
-    if(!$ignore_page)
+    if(!$ignore_pager)
     {
       if($this->limit != NULL)
       {
@@ -143,6 +143,11 @@ class Kohana_Collection implements Iterator, Countable {
           $this->current_group = $f['code'];
           $val = (substr($f['where'][2], 0, 1) == '@' ? DB::expr(substr($f['where'][2], 1)) : $f['where'][2]);
           $args[] = array($f['where'][0], $f['where'][1], $val);
+
+          if(isset($f['sort']))
+          {
+            $this->order_by = $f['sort'];
+          }
           
           break;
         }
