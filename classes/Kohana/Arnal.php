@@ -122,6 +122,6 @@ class Kohana_Arnal {
 
   public static function format_coolurl($string)
   {
-    return str_replace(array(' ',',','.','/'), array('-','','-','-'), strtolower(UTF8::transliterate_to_ascii($string)));
+    return str_replace(array(' ',',','.','/',':'), array('-','','-','-','-'), strtolower(UTF8::transliterate_to_ascii($string)));
   }
 }
