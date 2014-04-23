@@ -194,7 +194,13 @@ class Kohana_Collection implements Iterator, Countable {
     $new_items = array();
     foreach($this as $doc)
     {
-      $new_items[] = array('id'=>$doc->id, 'cols' => $doc->render($type, $array), 'url' => $doc->url(), 'type' => $doc->_type());
+      $new_items[] = array(
+        'id'=>$doc->id, 
+        'url' => $doc->url(), 
+        'admin_url' => $doc->admin_url(),
+        'type' => $doc->_type(),
+        'cols' => $doc->render($type, $array),
+      );
     }
     return $new_items;
   }
